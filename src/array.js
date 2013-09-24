@@ -150,6 +150,12 @@ SVG.extend(SVG.PointArray, {
 
     return this
   }
+  /* Append point to the point line */
+, to: function (x, y) {
+    this.value.push([x, y])
+
+    return this
+  }
   // Get bounding box of points
 , bbox: function() {
     if (this.value.length == 0)

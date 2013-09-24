@@ -24,6 +24,10 @@ SVG.extend(SVG.Polyline, SVG.Polygon, {
 , move: function(x, y) {
     return this.attr('points', this.points.move(x, y))
   }
+  // Append a point to the line
+, to: function (x, y) {
+    return this.attr('points', this.points.to(x, y))
+  }
   // Move by left top corner over x-axis
 , x: function(x) {
     return x == null ? this.bbox().x : this.move(x, this.bbox().y)
